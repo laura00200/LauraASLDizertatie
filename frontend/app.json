@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "SignToSpeech",
+    "slug": "SignToSpeech",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow camera access to record signs",
+          "microphonePermission": "Allow microphone (not used in this case)",
+          "recordAudioAndroid": false
+        }
+      ]
+    ],
+    "android": {
+      "permissions": ["CAMERA"],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    }
+  }
+}

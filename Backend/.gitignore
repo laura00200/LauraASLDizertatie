@@ -1,0 +1,15 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.pkl
+# your virtual-env
+.venv/
+venv/
+# IDE folders
+.idea/
+*.iml
+.DS_Store
+# ignore all .pth and .pt model files
+*.pth
+*.pt

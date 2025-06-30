@@ -1,27 +1,17 @@
-# === Python virtual envs ===
+# Python
+__pycache__/
+*.py[cod]
 .venv/
 venv/
-__pycache__/
-*.pyc
+.env
 
-# === FastAPI extras ===
-# your encrypted DB files, logs, etc
-*.sqlite3
-*.db
-
-# === Torch / model weights ===
-*.pth
-*.pt
-*.pkl
-
-# === IDE configs ===
-.idea/
-.vscode/
-
-# === Node / React Native ===
+# Node / React Native
 node_modules/
 .expo/
+*.log
 
-# === Misc OS junk ===
+# VSCode / JetBrains / OS
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
