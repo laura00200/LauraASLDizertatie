@@ -1,17 +1,34 @@
-# Python
+# ── Python / Backend ────────────────────────────────────────────────────────
+# compiled Python files
 __pycache__/
-*.py[cod]
+*.pyc
+# virtual environments
 .venv/
 venv/
-.env
+# your trained models if you don't want them in Git
+asl_model/trained_models/*.pth
+asl_model/trained_models/*.pkl
 
-# Node / React Native
-node_modules/
-.expo/
-*.log
+# ── React Native / Frontend ────────────────────────────────────────────────
+# dependencies
+/frontend/node_modules/
+/frontend/yarn-error.log
+# Expo temp
+/frontend/.expo/
+/frontend/.expo-shared/
+/frontend/*.tmp
+# Android / iOS builds
+/frontend/android/
+/frontend/ios/
+/frontend/build/
+/frontend/dist/
 
-# VSCode / JetBrains / OS
-.vscode/
-.idea/
+# ── Editors & OS ───────────────────────────────────────────────────────────
+# IDE folders
+/.idea/
+/.vscode/
+/*.suo
+# macOS
 .DS_Store
+# Windows
 Thumbs.db
