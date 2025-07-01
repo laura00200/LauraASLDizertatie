@@ -1,214 +1,154 @@
-#  Educational Sign Language and ASL Detection Mobile App
-
-A full-stack American Sign Language (ASL) learning & practice application built with Python FastAPI on the backend and React Native + Expo on the frontend.
-
----
-
-## Project Description
-
-DizertatieASL is designed to help users of all levels learn and practice ASL through interactive features:
-
-- **User Management**: Secure registration/login with JWT and persistent sessions.  
-- **ASL Alphabet**: Practice individual letters with real-time camera feedback and instant correctness validation.  
-- **Fingerspelling**: Spell predefined words (e.g. DOG, CAT, LOVE) one letter at a time, with always-visible letter grid, image cues, live prediction, retry & next controls.  
-- **Live Translation**: Use your device’s camera to recognize arbitrary ASL hand signs and display the translated text.  
-- **Quizzes & Dictionary**: Test your knowledge with quizzes and browse a mini-dictionary of common ASL words.  
-- **Community & Resources**: Learn about Deaf culture and access curated external resources.  
-- **Theme Settings**: Toggle between light & dark modes globally.  
-
-Under the hood, the backend uses MediaPipe Hands for hand-landmark detection and a PyTorch-trained `HandLandmarkNet` model for sign classification. The frontend is a cross-platform mobile app powered by Expo, with smooth navigation and state management.
-
----
-
-## Table of Contents
-
-- [Tech Stack](#tech-stack)  
-- [Prerequisites](#prerequisites)  
-- [Getting Started](#getting-started)  
-  - [Clone & Structure](#clone--structure)  
-  - [Backend Setup](#backend-setup)  
-  - [Frontend Setup](#frontend-setup)  
-- [Configuration](#configuration)  
-- [Running](#running)  
-- [Usage](#usage)  
-- [Testing](#testing)  
-- [Deployment](#deployment)  
-- [Contributing](#contributing)  
-- [License](#license)  
-
----
-
-## Tech Stack
-
-- **Backend**:  
-  - Python 3.8+, FastAPI, Uvicorn  
-  - SQLAlchemy / SQLite  
-  - MediaPipe Hands, OpenCV  
-  - PyTorch  
-- **Frontend**:  
-  - React Native (Expo)  
-  - React Navigation  
-  - Expo Camera  
-  - AsyncStorage  
-  - Jest, React Native Testing Library  
-- **Dev Tools**: Git/GitHub, VSCode, Android Studio/Xcode (emulators)
-
----
-
-## Prerequisites
-
-- Git & GitHub account  
-- Python 3.8+ & pip  
-- Node.js 14+ & npm/yarn  
-- Expo CLI (`npm install -g expo-cli`)  
-- A mobile device with Expo Go **or** Android/iOS simulator  
-
----
-
-## Getting Started
-
-### Clone & Structure
-
-```bash
-git clone https://github.com/laura00200/DizertatieASL.git
-cd DizertatieASL
-```
-
-```
-DizertatieASL/
-├─ Backend/
-└─ Frontend/
-```
-
-### Backend Setup
-
-```bash
-cd Backend
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS/Linux
-source .venv/bin/activate
-
-pip install -r requirements.txt
-```
-
-### Frontend Setup
-
-```bash
-cd ../Frontend
-npm install      # or yarn install
-```
-
----
-
-## Configuration
-
-### Backend:
-Copy `.env.example` → `.env` and fill in:
-
-```ini
-DATABASE_URL=sqlite:///./asl.db
-SECRET_KEY=your_secret_key
-```
-
-### Frontend:
-In `app.json` or environment, set:
-
-```json
-{
-  "expo": {
-    "extra": {
-      "API_BASE_URL": "http://<YOUR_BACKEND_IP>:8000"
-    }
-  }
-}
-```
-
----
-
-## Running
-
-### Backend
-
-```bash
-cd Backend
-# activate your venv
-uvicorn server:app --reload --host 0.0.0.0 --port 8000
-```
-
-API docs: [http://localhost:8000/docs](http://localhost:8000/docs)
-
-### Frontend
-
-```bash
-cd ../Frontend
-expo start
-```
-
-Scan QR with Expo Go or press `i` / `a` for iOS/Android simulator.
-
----
-
-## Usage
-
-Register or log in.
-
-On the Home dashboard, select a module:
-
-- “Learn Alphabet”
-- “Learn Fingerspelling”
-- “Translate”
-- “Take a Quiz”
-- “Mini Dictionary”
-- “Community”
-- “Settings” (toggle theme)
-
-Follow on-screen prompts (camera views, prediction boxes, retry/next controls).
-
----
-
-## Testing
-
-### Backend
-
-```bash
-cd Backend
-pytest -q
-```
-
-Place sample videos in `tests/samples/`.
-
-### Frontend
-
-```bash
-cd Frontend
-npm test
-```
-
----
-
-## Deployment
-
-- **Backend**: Dockerize or deploy to Heroku/GCP/AWS.
-- **Frontend**: Build standalone binaries with Expo (`expo build:android`, `expo build:ios`) or publish via Expo.
-
----
-
-## Contributing
-
-Fork & clone your fork.
-
-Create feature branch: `git checkout -b feat/your-feature`.
-
-Commit & push to your fork.
-
-Open a pull request against `main`.
-
-Please follow code style, include tests, and update docs.
-
----
-
-## License
-
-This project is licensed under the MIT License.
+## Aplicație pentru Traducerea Limbajului Mimico-Gestual
+
+## DEMO
+**link youtube**: https://www.youtube.com/watch?v=v15Gu0xLzLg&t=36s
+**link Drive**: https://drive.google.com/file/d/16vo2HBbWeVpQDWL5gzRPBFcVEpaeQPCT/view?usp=sharing
+
+## Prezentare generală
+Proiectul reprezintă partea practică a lucrării de dizertatie: O APLICAȚIE MOBILĂ EDUCAȚIONALĂ PENTRU LINGVISTICA SEMNELOR ȘI INTERPRETARE FOLOSIND RECUNOAȘTEREA POZEI MÂINII”. Scopul este dezvoltarea unei aplicații care folosește modelul pentru recunoașterea gesturilor mâinii și convertirea acestora în text și voce. De asemenea, include instrumente educaționale pentru învățarea limbajului semnelor.
+
+Codul este disponibil pe [GitHub](https://github.com/laura00200/LauraASLDizertatie).
+
+## Funcționalități
+
+- **Interpretare limbaj mimico-gestual**  
+  - Înregistrare videoclipuri cu limbajul semnelor  
+  - Recunoaștere gesturi  
+  - Conversie gesturi în text  
+  - Sinteză vocală din text  
+
+- **Autentificare utilizator**  
+  - Înregistrare cont nou (Register)
+  - Autentificare (Login) 
+  - Vizualizare blog și logout  
+
+- **Instrumente de învățare**  
+  - Învățarea alfabetului ASL  
+  - Învățarea cuvintelor comune în ASL  
+  - Chestionare de verificare a cunoștințelor  
+
+## Instalare
+
+### Prechizite
+
+- **Node.js și npm**: Node.js (versiunea 14.x sau ulterioară), npm (versiunea 6.x sau ulterioară)  
+- **Python**: Python 3.9 sau ulterioară  
+- **MongoDB**: MongoDB 4.4 sau ulterioară  
+- **Expo CLI**: Expo CLI 0.7.3 sau ulterioară  
+- **FastAPI**: FastAPI 0.108 sau ulterioară  
+- **Conda**: Anaconda sau Miniconda (ultima versiune)  
+
+### Instalare prechizite
+
+1. **Instalează Node.js și npm**:  
+   Descarcă de pe [nodejs.org](https://nodejs.org/).  
+2. **Instalează MongoDB**:  
+   Descarcă de pe [mongodb.com](https://www.mongodb.com/try/download/community).  
+3. **Instalează Conda**:  
+   Urmează ghidul de pe [docs.conda.io](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html).  
+4. **Instalează Expo CLI**:  
+   ```sh
+   npm install -g expo-cli@latest
+   ```
+
+### Configurare proiect
+
+1. Clonează depozitul:  
+   ```sh
+   git clone https://github.com/laura00200/LauraASLDizertatie.git
+   cd LauraASLDizertatie
+   ```
+
+#### Backend
+
+1. Accesează directorul backend:  
+   ```sh
+   cd backend
+   ```
+2. Creează și activează un mediu Conda:  
+   ```sh
+   conda create --name sign-language-translation python=3.8
+   conda activate sign-language-translation
+   ```
+3. Instalează dependențele:  
+   ```sh
+   pip install -r requirements.txt
+   ```
+4. Pornește serverul MongoDB:  
+   ```sh
+   mongod
+   ```
+5. Rulează serverul FastAPI:  
+   ```sh
+   uvicorn main:app --reload
+   ```
+
+#### Frontend
+
+1. Accesează directorul frontend:  
+   ```sh
+   cd ../frontend
+   ```
+2. Instalează dependențele:  
+   ```sh
+   npm install
+   ```
+3. Pornește serverul Expo:  
+   ```sh
+   npm start
+   ```
+
+## Utilizare
+
+Pentru funcționare, atât backend-ul, cât și frontend-ul trebuie pornite:
+
+1. Verifică că serverul FastAPI rulează:  
+   ```sh
+   uvicorn main:app --reload
+   ```
+2. Verifică că serverul Expo rulează:  
+   ```sh
+   npm start
+   ```
+3. Lansează aplicația pe dispozitivul mobil folosind Expo Go.  
+4. Înregistrează-te sau autentifică-te.  
+5. Navighează în aplicație pentru:  
+   - **Interpretare**: Înregistrează și traduce gesturile limbajului mimico-gestual.  
+   - **Învățare**: Accesează resurse educaționale ASL.
+
+## Structura proiectului
+root/
+├── Backend/
+│   ├── api/
+│   ├── asl_model/
+│   ├── dal/
+│   ├── dataset/
+│   ├── dto/
+│   ├── models/
+│   ├── services/
+│   ├── tests/
+│   ├── utils/
+│   └── server.py
+└── frontend/
+├── assets/
+├── navigation/
+├── screens/
+├── App.js
+└── package.json
+
+
+## Lucrări viitoare
+
+- Atingerea acurateței de 100% pentru modelul cu o singură mână.  
+- Îmbunătățirea acurateței pentru modelul cu două mâini.  
+- Adaptarea modelului pentru recunoașterea cuvintelor dinamice.  
+- Extinderea suportului pentru limbajul semnelor românesc.  
+- Creșterea fiabilității estimării poziției mâinii.  
+
+## Licență
+
+Acest proiect este sub licența MIT. Vezi fișierul [LICENSE](LICENSE) pentru detalii.
+
+## Acknowledgments
+
+Mulțumiri speciale testerilor și utilizatorilor pentru feedback-ul valoros.
