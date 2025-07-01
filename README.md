@@ -5,7 +5,7 @@
 **link Drive**: https://drive.google.com/file/d/16vo2HBbWeVpQDWL5gzRPBFcVEpaeQPCT/view?usp=sharing
 
 ## Prezentare generală
-Proiectul reprezintă partea practică a lucrării de dizertatie: O APLICAȚIE MOBILĂ EDUCAȚIONALĂ PENTRU LINGVISTICA SEMNELOR ȘI INTERPRETARE FOLOSIND RECUNOAȘTEREA POZEI MÂINII”. Scopul este dezvoltarea unei aplicații care folosește modelul pentru recunoașterea gesturilor mâinii și convertirea acestora în text și voce. De asemenea, include instrumente educaționale pentru învățarea limbajului semnelor.
+Proiectul reprezintă partea practică a lucrării de dizertatie: O APLICAȚIE MOBILĂ EDUCAȚIONALĂ PENTRU LINGVISTICA SEMNELOR ȘI INTERPRETARE FOLOSIND RECUNOAȘTEREA POZEI MÂINII. Scopul este dezvoltarea unei aplicații care folosește modelul pentru recunoașterea gesturilor mâinii și convertirea acestora în text și voce. De asemenea, include instrumente educaționale pentru învățarea limbajului semnelor.
 
 Codul este disponibil pe [GitHub](https://github.com/laura00200/LauraASLDizertatie).
 
