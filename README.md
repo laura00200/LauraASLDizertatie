@@ -117,6 +117,7 @@ Pentru funcționare, atât backend-ul, cât și frontend-ul trebuie pornite:
    - **Învățare**: Accesează resurse educaționale ASL.
 
 ## Structura proiectului
+```
 root/
 ├── Backend/
 │   ├── api/
@@ -130,11 +131,12 @@ root/
 │   ├── utils/
 │   └── server.py
 └── frontend/
-├── assets/
-├── navigation/
-├── screens/
-├── App.js
-└── package.json
+    ├── assets/
+    ├── navigation/
+    ├── screens/
+    ├── App.js
+    └── package.json
+```
 
 
 ## Lucrări viitoare
