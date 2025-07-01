@@ -1,4 +1,3 @@
-// ✅ CommonJS
 function validatePasswordMatch(password, confirmPassword) {
   return password === confirmPassword;
 }

@@ -1,13 +1,11 @@
-# services/asl_service.py
-
 import logging
 import pickle
 import cv2
 import mediapipe as mp
 import torch
 
-from asl_model.hand_utils import preprocess_for_model
-from asl_model.model import HandLandmarkNet
+from Backend.asl_model.hand_utils import preprocess_for_model
+from Backend.asl_model.model import HandLandmarkNet
 
 class InferenceService:
     def __init__(self):

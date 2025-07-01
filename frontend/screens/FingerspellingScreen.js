@@ -1,4 +1,4 @@
-// screens/FingerspellingScreen.js
+
 import React, { useRef, useState, useEffect } from "react"
 import {
     View,

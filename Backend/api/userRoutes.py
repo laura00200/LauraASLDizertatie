@@ -3,10 +3,10 @@ import logging
 from fastapi import APIRouter, HTTPException, Depends
 from starlette.status import HTTP_401_UNAUTHORIZED, HTTP_400_BAD_REQUEST
 
-from dal.userRepository import UserRepository
-from dto.userDto import LoginRequest, LoginResponse, RegisterRequest, RegisterResponse, ErrorResponse
-from dto.userDto import MessageResponse
-from services.userService import UserService
+from Backend.dal.userRepository import UserRepository
+from Backend.dto.userDto import LoginRequest, LoginResponse, RegisterRequest, RegisterResponse, ErrorResponse
+from Backend.dto.userDto import MessageResponse
+from Backend.services.userService import UserService
 
 router = APIRouter()
 

@@ -1,6 +1,6 @@
 import logging
 
-from models.userModel import User
+from Backend.models.userModel import User
 
 
 class UserRepository:

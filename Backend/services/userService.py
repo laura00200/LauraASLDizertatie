@@ -1,7 +1,7 @@
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from dal.userRepository import UserRepository
-from models.userModel import User
+from Backend.dal.userRepository import UserRepository
+from Backend.models.userModel import User
 
 
 class UserService:

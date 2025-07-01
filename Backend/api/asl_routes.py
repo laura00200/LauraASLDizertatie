@@ -1,5 +1,3 @@
-# api/asl_routes.py
-
 import os
 import aiofiles.tempfile
 import logging
@@ -9,8 +7,8 @@ from fastapi import APIRouter, File, UploadFile, HTTPException, Depends
 from fastapi.concurrency import run_in_threadpool
 from fastapi.responses import JSONResponse
 
-from dto.asl_dto import PredictionResponseDTO
-from services.asl_service import InferenceService
+from Backend.dto.asl_dto import PredictionResponseDTO
+from Backend.services.asl_service import InferenceService
 
 router = APIRouter()
 

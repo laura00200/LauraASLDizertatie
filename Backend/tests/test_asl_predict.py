@@ -2,7 +2,7 @@ import os
 from fastapi.testclient import TestClient
 
 from server import app
-from api.asl_routes import get_inference_service
+from Backend.api.asl_routes import get_inference_service
 
 
 class StubInferenceService:
